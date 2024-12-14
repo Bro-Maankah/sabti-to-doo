@@ -1,2 +1,2 @@
 # sabti-to-doo
-Small project to practice my js skills
+Small project to practice my javascript skills
