@@ -83,6 +83,14 @@ function attachEventListeners(li,task){
         handleDelete(task.id, li)
     })
 
+    editBtn.addEventListener("click",function(){
+        handleEdit(task.id,li)
+
+        //testing the edit event
+        console.log("edit btn clicked",task)
+
+    })
+
 }
 
 function handleDelete(id, li){
@@ -99,8 +107,17 @@ function handleDelete(id, li){
 
 }
 
+function handleEdit (id,li){
+    const taskSpan = li.querySelector(".task");
+    //console.log(taskSpan.textContent)
+    const newTaskText = prompt("Edit Your Task:", taskSpan.textContent)
 
-//handle edit fun
+    if (newTaskText !== null && newTaskText.trim() !== "" ){
+        taskSpan.textContent = newTaskText;
+    }
+
+}
+
 
 
 
