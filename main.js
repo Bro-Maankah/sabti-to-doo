@@ -56,10 +56,10 @@ function addTaskToDOM(task){
     li.dataset.id = task.id;
 
     //test li
-    console.log(li);
+    //console.log(li);
 
 
-    li.innerHTML = `<input type = "checkbox" class ="complete-checkbox">
+    li.innerHTML = `<input type = "checkbox" class ="complete-checkbox" ${task.completed ? "checked" : ""}>
     <span class= "task">${task.text}</span>
     <button class = "edit-btn">Edit</button>
     <button class ="delete-btn">Delete</button>
@@ -75,6 +75,8 @@ function addTaskToDOM(task){
 function attachEventListeners(li,task){
     const deleteBtn = li.querySelector(".delete-btn")
     const editBtn = li.querySelector(".edit-btn")
+    const checkbox = li.querySelector(".complete-checkbox")
+
 
     deleteBtn.addEventListener("click",function(){
         //testing the deete event
@@ -83,13 +85,26 @@ function attachEventListeners(li,task){
         handleDelete(task.id, li)
     })
 
+    //edit button event listener
     editBtn.addEventListener("click",function(){
+       
+
+        // testing the edit event
+        // console.log("edit btn clicked",task)
+
         handleEdit(task.id,li)
-
-        //testing the edit event
-        console.log("edit btn clicked",task)
-
     })
+
+
+    checkbox.addEventListener("change",function(){
+        
+        //test checkbox
+        //console.log("checked",checkbox.checked)
+        
+        toggleTaskCompletion(task.id, li,checkbox.checked)
+        
+    })
+
 
 }
 
@@ -113,11 +128,39 @@ function handleEdit (id,li){
     const newTaskText = prompt("Edit Your Task:", taskSpan.textContent)
 
     if (newTaskText !== null && newTaskText.trim() !== "" ){
+        
+        //UPDATE THE Local Storage
+        updateTask(id, newTaskText); 
+        //update the DOM
         taskSpan.textContent = newTaskText;
     }
 
 }
 
+function updateTask(id, newTaskText ){
+
+    const tasks = getTasksFromLocalSrorage();
+    const task = tasks.find(task => task.id == id );
+
+    if (task){
+        task.text = newTaskText;
+        localStorage.setItem('tasks',JSON.stringify(tasks))
+    }
+
+}
+
+function toggleTaskCompletion(id,li,isCompleted){
+
+    const tasks = getTasksFromLocalSrorage();
+    const task = tasks.find(task => task.id == id)
+
+    if (task){
+        task.completed = isCompleted;
+        localStorage.setItem("tasks",JSON.stringify(tasks))
+        li.classList.toggle("completed", isCompleted);
+    }
+
+}
 
 
 
