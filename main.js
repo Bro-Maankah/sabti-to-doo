@@ -66,14 +66,39 @@ function addTaskToDOM(task){
     `
     todoList.appendChild(li);
 
-    //att
+    attachEventListeners(li,task)
+
 
 
 }
 
-//attach fun
+function attachEventListeners(li,task){
+    const deleteBtn = li.querySelector(".delete-btn")
+    const editBtn = li.querySelector(".edit-btn")
 
-//handle delete 
+    deleteBtn.addEventListener("click",function(){
+        //testing the deete event
+        //console.log("delete btn clicked",task)
+    
+        handleDelete(task.id, li)
+    })
+
+}
+
+function handleDelete(id, li){
+
+    let tasks = getTasksFromLocalSrorage();
+    tasks = tasks.filter(task=> task.id !=id);
+
+    //test this function
+    //console.log(tasks)
+
+    //updating local storage
+    localStorage.setItem('tasks',JSON.stringify(tasks));
+    li.remove();
+
+}
+
 
 //handle edit fun
 
