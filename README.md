@@ -16,7 +16,7 @@ To get started with this project, simply clone the repository and open the `inde
 
 ```bash
 git clone https://github.com/your-username/todo-list.git
-cd todo-list
+cd sabti-todoo
 open index.html
 ```
 
