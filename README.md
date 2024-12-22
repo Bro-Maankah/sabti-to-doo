@@ -15,8 +15,8 @@ This is a simple to-do list application called sabti built with HTML, CSS, and J
 To get started with this project, simply clone the repository and open the `index.html` file in your browser.
 
 ```bash
-git clone https://github.com/your-username/todo-list.git
-cd sabti-todoo
+git clone https://github.com/Bro-Maankah/sabti-to-doo.git
+cd sabti-to-doo
 open index.html
 ```
 
