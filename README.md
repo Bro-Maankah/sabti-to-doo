@@ -1,6 +1,6 @@
 # To-Do List Application
 
-This is a simple to-do list application built with HTML, CSS, and JavaScript. It allows users to add, edit, delete, and mark tasks as completed. The tasks are stored in the browser's local storage, so they persist even after the page is refreshed.
+This is a simple to-do list application called sabti built with HTML, CSS, and JavaScript. It allows users to add, edit, delete, and mark tasks as completed. The tasks are stored in the browser's local storage, so they persist even after the page is refreshed.
 
 ## Features
 
