@@ -10,7 +10,7 @@ This is a simple to-do list application called sabti-to-doo ,built with HTML, CS
 - Mark tasks as completed
 - Persist tasks using local storage
 
-## Getting Started
+## Getting Started.
 
 To get started with this project, simply clone the repository and open the `index.html` file in your browser.
 
