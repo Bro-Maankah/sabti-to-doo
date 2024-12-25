@@ -2,7 +2,7 @@
 
 This is a simple to-do list application called sabti-to-doo ,built with HTML, CSS, and JavaScript. It allows users to add, edit, delete, and mark tasks as completed. The tasks are stored in the browser's local storage, so they persist even after the page is refreshed.
 
-## Features
+## Features.
 
 - Add new tasks
 - Edit existing tasks
