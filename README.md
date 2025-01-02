@@ -1,8 +1,8 @@
 # To-Do List Application
 
-This is a simple to-do list application built with HTML, CSS, and JavaScript. It allows users to add, edit, delete, and mark tasks as completed. The tasks are stored in the browser's local storage, so they persist even after the page is refreshed.
+This is a simple to-do list application called sabti-to-doo ,built with HTML, CSS, and JavaScript. It allows users to add, edit, delete, and mark tasks as completed. The tasks are stored in the browser's local storage, so they persist even after the page is refreshed.
 
-## Features
+## Features.
 
 - Add new tasks
 - Edit existing tasks
@@ -10,13 +10,13 @@ This is a simple to-do list application built with HTML, CSS, and JavaScript. It
 - Mark tasks as completed
 - Persist tasks using local storage
 
-## Getting Started
+## Getting Started.
 
 To get started with this project, simply clone the repository and open the `index.html` file in your browser.
 
 ```bash
-git clone https://github.com/your-username/todo-list.git
-cd todo-list
+git clone https://github.com/Bro-Maankah/sabti-to-doo.git
+cd sabti-to-doo
 open index.html
 ```
 
