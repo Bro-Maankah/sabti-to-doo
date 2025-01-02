@@ -2,6 +2,19 @@ const todoForm = document.querySelector('#todo-form');
 const todoInput = document.querySelector('#todo-input');
 const todoList = document.querySelector('#todo-list');
 
+
+// Pomodoro Timer Variables
+let pomodoroTimer;
+let timerRunning = false;
+let remainingSeconds = 25 * 60; // 25 minutes
+
+// Timer Elements
+const timerMinutes = document.querySelector('#timer-minutes');
+const timerSeconds = document.querySelector('#timer-seconds');
+const startButton = document.querySelector('#start-timer');
+const pauseButton = document.querySelector('#pause-timer');
+const resetButton = document.querySelector('#reset-timer');
+
 document.addEventListener("DOMContentLoaded",loadTasks);
 
 function loadTasks(){
@@ -180,3 +193,49 @@ function getTasksFromLocalSrorage(){
     return oldTasks;
     
 }
+
+
+
+// Timer Functions
+function updateTimerDisplay() {
+    const minutes = Math.floor(remainingSeconds / 60);
+    const seconds = remainingSeconds % 60;
+    timerMinutes.textContent = String(minutes).padStart(2, '0');
+    timerSeconds.textContent = String(seconds).padStart(2, '0');
+}
+
+function startPomodoro() {
+    if (timerRunning) return;
+    timerRunning = true;
+
+    pomodoroTimer = setInterval(() => {
+        if (remainingSeconds > 0) {
+            remainingSeconds--;
+            updateTimerDisplay();
+        } else {
+            clearInterval(pomodoroTimer);
+            timerRunning = false;
+            alert("Pomodoro session completed!");
+        }
+    }, 1000);
+}
+
+function pausePomodoro() {
+    clearInterval(pomodoroTimer);
+    timerRunning = false;
+}
+
+function resetPomodoro() {
+    clearInterval(pomodoroTimer);
+    timerRunning = false;
+    remainingSeconds = 25 * 60; // Reset to 25 minutes
+    updateTimerDisplay();
+}
+
+// Event Listeners for Timer Controls
+startButton.addEventListener('click', startPomodoro);
+pauseButton.addEventListener('click', pausePomodoro);
+resetButton.addEventListener('click', resetPomodoro);
+
+// Initial Timer Display Update
+updateTimerDisplay();

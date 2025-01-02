@@ -59,3 +59,38 @@ body {
 .todo-item button {
     margin-left: 5px;
 }
+
+/* Pomodoro Styles */
+.pomodoro-container {
+    background-color: #ffefba;
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.pomodoro-container h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.timer {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.timer-controls button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.timer-controls button:hover {
+    background-color: #ddd;
+}
