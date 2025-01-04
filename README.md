@@ -1,16 +1,17 @@
-# To-Do List Application
+# To-Do List Application with Pomodoro Clock
 
-This is a simple to-do list application called sabti-to-doo ,built with HTML, CSS, and JavaScript. It allows users to add, edit, delete, and mark tasks as completed. The tasks are stored in the browser's local storage, so they persist even after the page is refreshed.
+This is a simple to-do list application called sabti-to-doo, built with HTML, CSS, and JavaScript. It allows users to add, edit, delete, and mark tasks as completed. The tasks are stored in the browser's local storage, so they persist even after the page is refreshed. Additionally, it includes a Pomodoro Clock to help users manage their time effectively.
 
-## Features.
+## Features
 
 - Add new tasks
 - Edit existing tasks
 - Delete tasks
 - Mark tasks as completed
 - Persist tasks using local storage
+- Pomodoro Clock for time management
 
-## Getting Started.
+## Getting Started
 
 To get started with this project, simply clone the repository and open the `index.html` file in your browser.
 
@@ -20,19 +21,16 @@ cd sabti-to-doo
 open index.html
 ```
 
-## Code Overview
 
-### HTML
+##Code Overview
+###HTML
+The HTML file contains the structure of the to-do list application, including the form for adding new tasks, the list where tasks are displayed, and the Pomodoro Clock.
 
-The HTML file contains the structure of the to-do list application, including the form for adding new tasks and the list where tasks are displayed.
+###CSS
+The CSS file contains styles for the to-do list application and the Pomodoro Clock, making them visually appealing and user-friendly.
 
-### CSS
-
-The CSS file contains styles for the to-do list application, making it visually appealing and user-friendly.
-
-### JavaScript
-
-The JavaScript file contains the logic for the to-do list application. Below is a brief overview of the main functions:
+###JavaScript
+The JavaScript file contains the logic for the to-do list application and the Pomodoro Clock. Below is a brief overview of the main functions:
 
 - `loadTasks()`: Loads tasks from local storage and adds them to the DOM.
 - `addTask(e)`: Handles the form submission to add a new task.
@@ -44,7 +42,9 @@ The JavaScript file contains the logic for the to-do list application. Below is 
 - `toggleTaskCompletion(id, li, isCompleted)`: Toggles a task's completion status in the DOM and local storage.
 - `saveTaskToLocalStorage(task)`: Saves a new task to local storage.
 - `getTasksFromLocalSrorage()`: Retrieves tasks from local storage.
-
+- `startPomodoro()`: Starts the Pomodoro timer.
+- `pausePomodoro()`: Pauses the Pomodoro timer.
+- `resetPomodoro()`: Resets the Pomodoro timer.
 ## Contributing
 
 If you would like to contribute to this project, please fork the repository and submit a pull request. We welcome all contributions!
