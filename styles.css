@@ -94,3 +94,9 @@ body {
 .timer-controls button:hover {
     background-color: #ddd;
 }
+footer p {
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 20px;
+}
